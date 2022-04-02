@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="" />
+  </head>
+  <body>
+    <!-- <h2>This is the name: <%= kindOfDay %></h2> -->
+    <h1> <%= kindOfDay %> </h1>
+    <h2> Page Loads: <%= refreshcount  %></h2>
+
+    <!-- <p> test 2</p> -->
+    <% for (var i= 0; i<newListItems.length; i++) { %>
+      <li> <%= newListItems[i] %> </li>
+    <% } %>
+    <form class="" action="/" method="post">
+      <input type="text" name = "newItem"</input>
+      <button type="submit" name="button">Add</button>
+    </form>
+
+    <script>
+ 
+      let formattedDay = "<%-kindOfDay%>";
+      refreshcount += 10;
+      
+    </script>
+  </body>
+</html>
