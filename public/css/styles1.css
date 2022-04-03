@@ -1,0 +1,11 @@
+html {
+  background-color: lightblue;
+}
+
+ol li {
+  background-color: rgb(60, 255, 0);
+}
+
+/* li:nth-child(1) {
+  background-color: green;
+} */
