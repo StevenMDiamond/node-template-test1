@@ -1,6 +1,9 @@
 let express = require("express");
 const bodyParser = require("body-parser");
+const path = require("path");
+//const filePath = path.join(__dirname, "/views/index-FINISHED.html");
 let app = express();
+app.use(express.static(path.join(__dirname, "public")));
 
 let items = ["Buy Food", "Cook Food", "Eat Food"];
 let refreshcount = 0;
@@ -21,7 +24,18 @@ app.get("/", function (req, res) {
     kindOfDay: day,
     newListItems: items,
     refreshcount: refreshcount,
+    //filePath: filePath,
   });
+});
+
+// let router = express.Router();
+
+// router.get("/publication", function (req, res) {
+//   res.sendFile(path.join(__dirname, "/views/index-FINISHED.html"));
+// });
+
+app.get("/finished", function (req, res) {
+  res.redirect("index-FINISHED.html");
 });
 
 app.post("/", function (req, res) {
@@ -36,5 +50,6 @@ if (port == null || port == "") {
 }
 
 app.listen(port, function (req, res) {
+  //console.log(filePath);
   console.log("Connected on port: 3000");
 });
